@@ -1,0 +1,70 @@
+body{background:#f0f0f0;color:#6c757d;letter-spacing:2px;font-weight:400;font-size:14px;line-height:1.5;}
+*,body{margin:0;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0;}
+a{color:#333;text-decoration:none;}
+li,ul{list-style:none;}
+/*全局*/
+.container{position:relative;margin:auto;width:75pc;max-width:100%;}
+.content{position:relative;margin-top:50px;border-radius:2px;background-color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.1);}
+/*手机顶部*/
+.menu_nav{display: none;}
+/*菜单*/
+.menu_container{position:absolute;top:0;bottom:0;z-index:10;overflow:auto;width:150px;border-right:1px solid #dcdee0;background:#fff;box-shadow:rgba(0,0,0,.1) 0 0 2px 0;text-align:center;}
+.menu_container ul{overflow:hidden;margin-bottom:75pt;}
+.menu_container ul li{position:relative;float:left;display:block;width:100%;}
+.menu_container ul li a{position:relative;float:left;overflow:hidden;padding:10px;width:100%;color:#666;text-decoration:none;white-space:nowrap;font-size:1pc;transition:color .2s linear,background .2s linear;}
+.menu_container ul .active a{background-color: #00BCD4;color: #fff;}
+.menu_container li a i{margin-right:5px;}
+.menu_foot{position:absolute;bottom:0;width:100%;}
+.menu_foot i{width:35px;height:35px;line-height:35px;}
+.menu_foot .beian{font-size: 12px;margin-bottom: 5px;}
+.logo{padding: 10px 0;border-bottom: 1px solid #f4f4f4;}
+.logo img{width:90px;height:90px;max-width:100%;border-radius:50%;vertical-align:middle;font-size:100%;transition: transform.5s ease-out;border: 2px solid #fff;}
+.logo img:hover{transform: rotate(360deg);}
+/*首页*/
+.index_new h1{width:100%;height:42px;background:linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);background-size:400% 400%;color:#fff;text-align:center;font-family:Exo,sans-serif;animation:gradientBG 15s ease infinite;}
+@keyframes gradientBG{0%{background-position:0 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0 50%;}
+}
+/*内容*/
+.min{overflow:auto;margin-left:150px;padding:15px;position: relative;}
+.min_title h1{position:relative;padding-bottom:8px;border-bottom:2px solid #eee;color:#333;font-size:20px;}
+.min_title h1:hover:after{width:88px;background:#666;}
+.min_title h1:after{position:absolute;bottom:-2px;left:0;width:60px;height:2px;background:#666;content:"";transition:all .5s ease;}
+.min_title h1 font{margin-left:10px;color:#666;font-weight:500;font-size:14px;}
+.min_content{overflow:auto;padding-bottom:30px;height:70vh;}
+.min_content::-webkit-scrollbar{width:3px;height:3px;background-color:#fff;}
+.min_content::-webkit-scrollbar-thumb{background-color:#666;}
+.min_content .article{float:left;overflow:hidden;padding:15px;width:33.333%;}
+.min_content .article a{position:relative;float:left;overflow:hidden;padding:10px;width:100%;height:125px;border:1px solid #dee2e6;border-radius:4px;background-color:#fff;box-shadow:0 0 1px rgba(0,0,0,.15);}
+.min_content .article h1{overflow:hidden;padding-bottom:5px;border-bottom:1px dashed #9e9e9e61;text-overflow:ellipsis;white-space:nowrap;font-size:16px;}
+.min_content .article .abstract{padding-top:10px;}
+.min_content .article i{margin-right:5px;font-size:20px;}
+.min_content .new{padding: 10px 0;overflow: hidden;}
+.min_content .new h1,.min_content .new p{text-align: center;}
+.min_content .new h1{margin-bottom: 10px;font-size: 20px;}
+.min_content .new p{font-size: 12px;}
+/*底部*/
+footer{position:absolute;right:0;bottom:0;width:100%;border-top:1px solid #f4f4f4;background-color:#fff}
+.footer{padding:10px 20px;font-size:12px}
+.footer .link{float: right;}
+.footer .link a{color: #666; margin-left: 5px;}
+@media only screen and (max-width: 767px){
+.content{margin-top:0;}
+.menu_container{position: relative;float:left;width:100%;}
+.menu_container ul{margin-bottom:0;width:580px;}
+.menu_container ul li{display:inline-block;width:auto;}
+.min{margin-left:0;}
+.min_content{height: auto;}
+.content .index{float:left;width:100%;}
+.min_content .article a{height:auto;}
+.min_content .article{padding:10px 0;width:100%;}
+.menu_container ul li a{font-size: 12px;}
+.footer{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.footer .link,.logo,.menu_foot{display:none;}
+/*手机顶部*/
+.menu_nav{float:left;overflow:hidden;margin-bottom:5px;padding:10px 0;width:100%;background-color:#fff;box-shadow:0 0 6px hsla(0,3%,53%,.41);display: block;}
+.menu_nav h1{float:left;padding-left:10px;color:#333;font-weight:600;font-size:18px;}
+.menu_nav a i{float:right;margin-top:6px;padding-right:10px;color:#03a9f4;font-size:1pc;}
+}
