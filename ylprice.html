@@ -46,8 +46,8 @@
             d = d.toFixed(2);
             e = e.toFixed(2);
 
-            var ht = "<center><p>1-99(原价):     " + a + "</p><br><p>100-500(九折):     " + b + "</p><br><p>500-1000(七折):     " + c + "</p><br><p>100-3000(六折):     " + d + "</p><br><p>5000以上(四五折):     " + e + "</p><br></center>";
-
+            //var ht = "<center><p>1-99(原价):     " + a + "</p><br><p>100-500(九折):     " + b + "</p><br><p>500-1000(七折):     " + c + "</p><br><p>100-3000(六折):     " + d + "</p><br><p>5000以上(四五折):     " + e + "</p><br></center>";
+            var ht = `<br><center><table border="1"><tr><td>数量（折扣）</td><td>价格</td></tr><tr><td>1-99(原价)</td><td>${a}</td></tr><tr><td>100-500(九折)</td><td>${b}</td></tr><tr><td>500-1000(七折)</td><td>${c}</td></tr><tr><td>100-3000(六折)</td><td>${d}</td></tr><tr><td>5000以上(四五折)</td><td>${e}</td></tr></table></center>`
             var div = document.getElementById('p1');
             div.setAttribute("style", "text-align: left;white-space:pre;");
             div.innerHTML = ht;
