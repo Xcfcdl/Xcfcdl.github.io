@@ -21,12 +21,7 @@ if action == '1':
     <meta name="description" content="{page_description}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script type="module" src="js/menu_container.js"></script>
-    <script type="module">
-        import {{ initializeMenu }} from './js/menu_container.js';
-        document.addEventListener('DOMContentLoaded', initializeMenu);
-    </script>
+    <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
     <div class="container">
@@ -40,11 +35,12 @@ if action == '1':
                 <div class="logo">
                     <img src="logo.png" alt="LOGO头像">
                 </div>
+                <div id="menulist_container"></div>
                 <!-- 菜单将由 JavaScript 动态生成 -->
                 <div class="menu_foot">
-                    <a href="javascript:alert('功能暂未配置');"><i class="fa fa-qq"></i></a>
-                    <a href="javascript:alert('功能暂未配置');"><i class="fa fa-bar-chart-o"></i></a>
-                    <a href="javascript:alert('功能暂未配置');"><i class="fa fa-id-card-o"></i></a>
+                    <a href="javascript:alert('功能暂未配置');" title="联系QQ"><i class="fa fa-qq"></i></a>
+                    <a href="javascript:alert('功能暂未配置');" title="站点统计"><i class="fa fa-bar-chart-o"></i></a>
+                    <a href="javascript:alert('功能暂未配置');" title="关于我们"><i class="fa fa-id-card-o"></i></a>
                 </div>
             </div>
             <div class="min">
@@ -74,7 +70,13 @@ if action == '1':
     # 生成 JS 文件内容
     js_content = f"""
     // 业务代码
-    document.addEventListener('DOMContentLoaded', () => {{console.log("{page_title} 页面加载完成");}});
+    import {{ initializeMenu }} from './menu_container.js';
+
+    document.addEventListener('DOMContentLoaded', () => {{
+        initializeMenu();
+        console.log("{page_title} 页面加载完成");
+        // 在此处添加页面特定的 JavaScript 逻辑
+    }});
     """
 
     # 更新 config.json
@@ -91,7 +93,12 @@ if action == '1':
             print(f"未找到 items")
             return
 
-        config[page_category]['items'][page_title] = True
+        config[page_category]['items'][page_name] = {
+            "visible": True,
+            "link": f"{page_name}.html",
+            "title": f"<i class='fa fa-file-code-o'></i>{page_title}",
+            "description": page_description
+        }
 
         with open(config_path, 'w', encoding='utf-8') as file:
             json.dump(config, file, ensure_ascii=False, indent=4)
@@ -156,11 +163,15 @@ elif action == '2':
             html_path = f"{project_name}.html"
             if os.path.exists(html_path):
                 os.remove(html_path)
+            else:
+                print(f"文件 {html_path} 不存在，无法删除。")
 
             # 删除 JS 文件
             js_path = f"js/{project_name}.js"
             if os.path.exists(js_path):
                 os.remove(js_path)
+            else:
+                print(f"文件 {js_path} 不存在，无法删除。")
 
             print(f"项目 {project_name} 已删除。")
         else:

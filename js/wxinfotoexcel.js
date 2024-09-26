@@ -1,3 +1,10 @@
+import { initializeMenu } from './menu_container.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeMenu();
+    // 其他初始化代码
+
+
 let extractedData = [];
 
 function extractInfo() {
@@ -60,5 +67,6 @@ function downloadCSV() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        }
     }
-}
+});

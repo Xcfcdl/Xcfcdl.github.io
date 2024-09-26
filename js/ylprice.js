@@ -1,3 +1,10 @@
+import { initializeMenu } from './menu_container.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeMenu();
+    // 其他初始化代码
+
+
 function changetext() {
   var price = document.getElementById('price').value;
   var a = Number(price);
@@ -30,4 +37,5 @@ document.getElementById('copyButton').addEventListener('click', function() {
     alert('复制失败,请手动复制.');
   });
   window.getSelection().removeAllRanges();
+});
 });
