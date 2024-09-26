@@ -1,94 +1,191 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>产品梯级价格生成工具</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+<meta charset="utf-8"/>
+<title>Dony工具箱-最便捷的在线工具箱</title>
+<meta name="keywords" content="Dony工具箱,蓝优工具箱网页版,网页工具箱,蓝优工具箱,蓝优" />
+<meta name="description" content="Dony工具箱(69560.cn)提供最便捷、最全面的在线工具箱,让站长和网友的网络生活更简单精彩。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<style>
+	    :root {
+      --primary-color: #07C160;
+      --background-color: #F7F7F7;
+      --text-color: #333333;
+      --hover-color: #06AE56;
     }
-    .container {
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      text-align: center;
-    }
-    h1 {
-      color: #333;
-      margin-bottom: 1.5rem;
-    }
-    input, button {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      margin: 0.5rem;
-      border: none;
-      border-radius: 5px;
-    }
-    input {
-      background-color: #f0f0f0;
-      transition: background-color 0.3s;
-    }
-    input:focus {
-      background-color: #ffffff;
-      outline: none;
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-    }
-    button {
-      background-color: #007bff;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    table {
-      margin-top: 1.5rem;
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-    }
-    th, td {
-      padding: 0.75rem;
-      border: 1px solid #dee2e6;
-    }
-    th {
-      background-color: #f8f9fa;
-      font-weight: 500;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  </style>
+
+  h1 {
+
+	color: var(--text-color);
+	font-size: 24px;
+	margin-bottom: 30px;
+  }
+
+  .input-group {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+  }
+
+  input, button {
+	height: 40px;
+	font-size: 16px;
+	border: 1px solid #E6E6E6;
+	border-radius: 4px;
+  }
+
+  input {
+	width: 200px;
+	padding: 0 15px;
+	margin-right: 10px;
+	background-color: #FFFFFF;
+	color: var(--text-color);
+  }
+
+  input::placeholder {
+	color: #999999;
+  }
+
+  button {
+	background-color: var(--primary-color);
+	color: #FFFFFF;
+	padding: 0 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: none;
+  }
+
+  button:hover {
+	background-color: var(--hover-color);
+  }
+
+  table {
+	border-collapse: collapse;
+	width: 50%;
+	margin-top: 20px;
+  }
+
+  th, td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #E6E6E6;
+  }
+
+  th {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-weight: bold;
+  }
+
+  tr:hover {
+	background-color: #F2F2F2;
+  }
+</style>
 </head>
-
 <body>
-  <div class="container">
-    <img src="logo.png" alt="logo" style="width: 100px; margin-bottom: 1rem;">
-    <h1>产品梯级价格生成工具</h1>
-    <input type="number" placeholder="请输入原始价格" id="price" autofocus>
-    <button onclick="changetext()">生成价格</button>
-    <div id="p1"></div>
-  </div>
+<div class="container">
+	<div class="content">
+		<div class="menu_nav">
+		    <a href="#" title="LOGO"><h1>Dony工具箱</h1></a>
+			<a href="#" title="联系QQ"><i class="fa fa-qq"></i></a>
+		</div>
+		<!-- 电脑菜单 -->
+		<div class="menu_container">
+		    <div class="logo">
+			    <img src="logo.png" alt="LOGO头像">
+			</div>
+			<ul>
+				<li class="active"><a href="index.html"><i class="fa fa-home"></i>网站首页</a></li>
+				<li><a href="station.html" title="站长工具"><i class="fa fa-wrench"></i>站长工具</a></li>
+				<li><a href="wxtools.html" title="公众号工具"><i class="fa fa-ravelry"></i>公众号工具</a></li>
+				<!-- <li><a href="yule.html" title="娱乐工具"><i class="fa fa-paper-plane-o"></i>娱乐工具</a></li>-->
+				<!-- <li><a href="video.html" title="影视在线"><i class="fa fa-play-circle-o"></i>影视在线</a></li>-->
+				<!-- <li><a href="store.html" title="网站收藏"><i class="fa fa-star"></i>网站收藏</a></li>-->
+			</ul>
+			<div class="menu_foot">
+			    <a href="javascript:alert('功能暂未配置');"><i class="fa fa-qq"></i></a>
+				<a href="javascript:alert('功能暂未配置');"><i class="fa fa-bar-chart-o"></i></a>
+				<a href="javascript:alert('功能暂未配置');"><i class="fa fa-id-card-o"></i></a>
+			</div>
+		</div>
+		<div class="min">
+		    <div class="min_title">
+			    <h1>Dony工具箱<font>产品发布价格工具</font></h1>
+			</div>
+			
+			<div class="min_content">
+				<p style="height: 100px;"></p>
+				<h1 style="text-align: center;">产品发布价格工具</h1>
+				<div class="input-group">
+				  <input type="number" placeholder="请输入原始价格" id="price" autofocus onkeydown="if(event.key==='Enter') changetext()">
+				  <button type="button" onclick="changetext()">价格生成</button>
+				  <button id="copyButton" style="margin-left: 10px;text-align: center;">复制表格</button>
+				</div>
+				<div id="p1"></div>
+			  </div>
+			
+			  
 
-  <script>
-    function changetext() {
-      // ... 保持原有的 JavaScript 代码不变 ...
-    }
-  </script>
+			<footer>
+				<div class="footer">
+					<a href="https://www.donychi.xyz/" title="Dony工具箱" target="_blank">Dony工具箱</a>
+							<a href="https://www.donychi.xyz/" title="Dony迁站坊" target="_blank">Dony迁站坊</a>
+				 </div>
+			</footer>
+		</div>
+	</div>
+</div>
 </body>
+<script>
+	function changetext() {
+  var price = document.getElementById('price').value;
+  var a = Number(price);
+  var b = a * 0.95;
+  var c = a * 0.9;
+  var d = a * 0.85;
+  var e = a * 0.80;
+  a = a.toFixed(2);
+  b = b.toFixed(2);
+  c = c.toFixed(2);
+  d = d.toFixed(2);
+  e = e.toFixed(2);
+
+  //var ht = "<center><p>1-99(原价):     " + a + "</p><br><p>100-500(九折):     " + b + "</p><br><p>500-1000(七折):     " + c + "</p><br><p>100-3000(六折):     " + d + "</p><br><p>5000以上(四五折):     " + e + "</p><br></center>";
+  var ht = `<br><center><table border="1" id="priceTable"><tr><td>数量（折扣）</td><td>价格</td></tr><tr><td>1-99(原价)</td><td>${a}</td></tr><tr><td>100-500(九五折)</td><td>${b}</td></tr><tr><td>500-1000(九折)</td><td>${c}</td></tr><tr><td>1000-3000(八五折)</td><td>${d}</td></tr><tr><td>5000以上(八折)</td><td>${e}</td></tr></table></center>
+`
+  var div = document.getElementById('p1');
+  div.setAttribute("style", "text-align: left;white-space:pre;");
+  div.innerHTML = ht;
+}
+document.getElementById('copyButton').addEventListener('click', function() {
+	  // 获取表格
+	  var table = document.getElementById('priceTable');
+	  
+	  // 创建一个范围来包含表格
+	  var range = document.createRange();
+	  range.selectNode(table);
+	  
+	  // 清除当前选择
+	  window.getSelection().removeAllRanges();
+	  
+	  // 选择表格
+	  window.getSelection().addRange(range);
+	  
+	  // 尝试复制
+	  try {
+		document.execCommand('copy');
+		alert('表格已复制到剪贴板!');
+	  } catch(err) {
+		console.error('复制失败:', err);
+		alert('复制失败,请手动复制.');
+	  }
+	  
+	  // 清除选择
+	  window.getSelection().removeAllRanges();
+	});
+
+</script>
 
 </html>
