@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <title>Dony工具箱-最便捷的在线工具箱</title>
-<meta name="keywords" content="Dony工具箱,蓝优工具箱网页版,网页工具箱,蓝优工具箱,蓝优" />
-<meta name="description" content="Dony工具箱(69560.cn)提供最便捷、最全面的在线工具箱,让站长和网友的网络生活更简单精彩。" />
+<meta name="keywords" content="Dony工具箱, 在线工具箱, 站长工具" />
+<meta name="description" content="Dony工具箱提供最便捷、最全面的在线工具箱，让站长和网友的网络生活更简单精彩。" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="container">
@@ -17,22 +18,16 @@
 			<a href="#" title="联系QQ"><i class="fa fa-qq"></i></a>
 		</div>
 		<!-- 电脑菜单 -->
-		<div class="menu_container">
-		    <div class="logo">
-			    <img src="logo.png" alt="LOGO头像">
+		<div class="menu_container" id="menu_container">
+			<div class="logo">
+				<img src="logo.png" alt="LOGO头像">
 			</div>
-			<ul>
-				<li class="active"><a href="index.html"><i class="fa fa-home"></i>网站首页</a></li>
-				<li><a href="station.html" title="站长工具"><i class="fa fa-wrench"></i>站长工具</a></li>
-				<li><a href="wxtools.html" title="公众号工具"><i class="fa fa-ravelry"></i>公众号工具</a></li>
-				<!-- <li><a href="yule.html" title="娱乐工具"><i class="fa fa-paper-plane-o"></i>娱乐工具</a></li>-->
-				<!-- <li><a href="video.html" title="影视在线"><i class="fa fa-play-circle-o"></i>影视在线</a></li>-->
-				<!-- <li><a href="store.html" title="网站收藏"><i class="fa fa-star"></i>网站收藏</a></li>-->
-			</ul>
+			<div id="menulist_container"></div>
+			<!-- 菜单将由 JavaScript 动态生成 -->
 			<div class="menu_foot">
-			    <a href="javascript:alert('功能暂未配置');"><i class="fa fa-qq"></i></a>
-				<a href="javascript:alert('功能暂未配置');"><i class="fa fa-bar-chart-o"></i></a>
-				<a href="javascript:alert('功能暂未配置');"><i class="fa fa-id-card-o"></i></a>
+				<a href="javascript:alert('功能暂未配置');" title="联系QQ"><i class="fa fa-qq"></i></a>
+				<a href="javascript:alert('功能暂未配置');" title="站点统计"><i class="fa fa-bar-chart-o"></i></a>
+				<a href="javascript:alert('功能暂未配置');" title="关于我们"><i class="fa fa-id-card-o"></i></a>
 			</div>
 		</div>
 		<div class="min">
@@ -40,88 +35,76 @@
 			    <h1>Dony工具箱<font>站长工具</font></h1>
 			</div>
 			<div class="min_content">
-			    <div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>腾讯域名安全检测</h1>						
-						<div class="abstract">通过查询域名在QQ/微信是否拦截</div>
+				<div class="article">
+					<a href="http://api.new.urlzt.com/api/vx">
+						<h1><i class="fa fa-file-code-o"></i>腾讯域名安全检测</h1>
+						<div class="abstract">通过查询域名在 QQ/微信是否拦截</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>腾讯短网址生成</h1>						
+					<a href="酷牛短链接">
+						<h1><i class="fa fa-file-code-o"></i>酷牛短链接</h1>
 						<div class="abstract">本站提供腾讯短网址缩短服务，具有稳定、快速、安全的特点。</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>新浪短网址生成</h1>						
+					<a href="http://dogdwz.cn/">
+						<h1><i class="fa fa-file-code-o"></i>冷狗短链接</h1>
 						<div class="abstract">本站提供新浪短网址缩短服务，具有稳定、快速、安全的特点。</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>Html工具</h1>						
-						<div class="abstract">Html在线美化、格式化、压缩、净化</div>
+					<a href="https://www.gjk.cn/html">
+						<h1><i class="fa fa-file-code-o"></i>Html 工具</h1>
+						<div class="abstract">Html 在线美化、格式化、压缩、净化</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>Css工具</h1>						
-						<div class="abstract">在线css美化、格式化、压缩</div>
+					<a href="https://www.toolfk.com/tool-format-css">
+						<h1><i class="fa fa-file-code-o"></i>Css 工具</h1>
+						<div class="abstract">在线 css 美化、格式化、压缩</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>javascript工具</h1>						
-						<div class="abstract">在线js美化、解压缩、混淆</div>
+					<a href="ttps://www.toolfk.com/tool-js">
+						<h1><i class="fa fa-file-code-o"></i>javascript 工具</h1>
+						<div class="abstract">在线 js 美化、解压缩、混淆</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>JavaScript混淆工具</h1>						
-						<div class="abstract">JavaScript混淆器是一个免费的在线工具，可以混淆你的源代码，防止未经许可而被盗用。</div>
+					<a href="https://obfuscator.io/">
+						<h1><i class="fa fa-file-code-o"></i>JavaScript 混淆工具</h1>
+						<div class="abstract">JavaScript 混淆器是一个免费的在线工具，可以混淆你的源代码，防止未经许可而被盗用。</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>Json工具</h1>						
-						<div class="abstract">Json在线解析、验证、格式化等服务</div>
+					<a href="https://www.json.cn/">
+						<h1><i class="fa fa-file-code-o"></i>Json 工具</h1>
+						<div class="abstract">Json 在线解析、验证、格式化等服务</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>JJencode编码工具</h1>						
-						<div class="abstract">在线JJencode编码解码工具，将JS代码转换成只有符号的字符串。</div>
-					</a>
-				</div>
-				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>AAencode编码工具</h1>						
-						<div class="abstract">在线AAencode编码解码工具，将JS代码转换成只有符号的字符串。</div>
-					</a>
-				</div>
-				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>文章伪原创工具</h1>						
+					<a href="https://www.zimeiai.com/">
+						<h1><i class="fa fa-file-code-o"></i>文章伪原创工具</h1>
 						<div class="abstract">专门生成原创及伪原创文章的在线工具，可以把在互联网上复制的文章瞬间变成原创文章。</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>开发工具箱</h1>						
+					<a href="https://www.bangxiaomang.com/">
+						<h1><i class="fa fa-file-code-o"></i>帮小忙开发工具箱</h1>
 						<div class="abstract">开发工具箱通过可视化界面操作完成一系列需要编程才能实现的功能。</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>百度收录在线查询</h1>						
+					<a href="https://tool.chinaz.com/baidu/">
+						<h1><i class="fa fa-file-code-o"></i>百度收录在线查询</h1>
 						<div class="abstract">查询网站在百度的综合收录情况</div>
 					</a>
 				</div>
 				<div class="article">
-				    <a href="#">
-					    <h1><i class="fa fa-file-code-o"></i>域名ICP备案查询</h1>						
-						<div class="abstract">通过域名可查询该域名是否有备案及相关的ICP备案许可信息。</div>
+					<a href="https://beian.miit.gov.cn/">
+						<h1><i class="fa fa-file-code-o"></i>域名 ICP 备案查询</h1>
+						<div class="abstract">通过域名可查询该域名是否有备案及相关的 ICP 备案许可信息。</div>
 					</a>
 				</div>
 			</div>
@@ -137,5 +120,7 @@
 		</div>
 	</div>
 </div>
+
+<script src="js/station.js" type="module"></script>
 </body>
 </html>

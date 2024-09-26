@@ -60,63 +60,12 @@ li, ul {
     text-align: center;
 }
 
-.menu_container ul {
-    overflow: hidden;
-    margin-bottom: 75pt;
-}
-
-.menu_container ul li {
-    position: relative;
-    float: left;
-    display: block;
-    width: 100%;
-}
-
-.menu_container ul li a {
-    position: relative;
-    float: left;
-    overflow: hidden;
-    padding: 15px 10px;
-    width: 100%;
-    color: #333333;
-    text-decoration: none;
-    white-space: nowrap;
-    font-size: 14px;
-    transition: background 0.3s;
-}
-
-.menu_container ul .active a {
-    background-color: #07C160;
-    color: #fff;
-}
-
-.menu_container li a i {
-    margin-right: 5px;
-}
-
-.menu_foot {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.menu_foot i {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-}
-
-.menu_foot .beian {
-    font-size: 12px;
-    margin-bottom: 5px;
-}
-
-.logo {
+.menu_container .logo {
     padding: 20px 0;
     border-bottom: 1px solid #E6E6E6;
 }
 
-.logo img {
+.menu_container .logo img {
     width: 90px;
     height: 90px;
     max-width: 100%;
@@ -127,8 +76,64 @@ li, ul {
     border: 2px solid #fff;
 }
 
-.logo img:hover {
+.menu_container .logo img:hover {
     transform: rotate(360deg);
+}
+
+.menu_container .menu_item {
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.menu_container .menu_item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s, border-left 0.3s;
+}
+
+.menu_container .menu_item:hover a {
+    background-color: #07C160;
+    color: #fff;
+}
+
+.menu_container .menu_item.active a {
+    border-left: 5px solid #07C160;
+    background-color: #07C160;
+    color: #fff;
+}
+
+.menu_container .menu_item a i {
+    margin-right: 5px;
+}
+
+.menu_container .menu_foot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.menu_container .menu_foot a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu_container .menu_foot a:hover {
+    color: #07C160;
+}
+
+.menu_container .menu_foot .beian {
+    font-size: 12px;
+    margin-bottom: 5px;
 }
 
 /* 首页 */
@@ -233,6 +238,21 @@ li, ul {
 .min_content .article .abstract {
     padding-top: 10px;
     color: #666;
+    max-height: 3em; /* 限制最大高度 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    text-overflow: ellipsis; /* 使用省略号 */
+    white-space: nowrap; /* 禁止换行 */
+    position: relative;
+}
+
+.min_content .article .abstract:hover {
+    white-space: normal; /* 允许换行 */
+    max-height: none; /* 取消高度限制 */
+    overflow: visible; /* 显示溢出内容 */
+    background: #fff; /* 背景色 */
+    z-index: 1; /* 提升层级 */
+    padding: 10px; /* 增加内边距 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 添加阴影 */
 }
 
 .min_content .article i {

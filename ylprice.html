@@ -7,7 +7,8 @@
 <meta name="description" content="Dony工具箱(69560.cn)提供最便捷、最全面的在线工具箱,让站长和网友的网络生活更简单精彩。" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
 <style>
 	    :root {
       --primary-color: #07C160;
@@ -92,22 +93,16 @@
 			<a href="#" title="联系QQ"><i class="fa fa-qq"></i></a>
 		</div>
 		<!-- 电脑菜单 -->
-		<div class="menu_container">
-		    <div class="logo">
-			    <img src="logo.png" alt="LOGO头像">
+		<div class="menu_container" id="menu_container">
+			<div class="logo">
+				<img src="logo.png" alt="LOGO头像">
 			</div>
-			<ul>
-				<li class="active"><a href="index.html"><i class="fa fa-home"></i>网站首页</a></li>
-				<li><a href="station.html" title="站长工具"><i class="fa fa-wrench"></i>站长工具</a></li>
-				<li><a href="wxtools.html" title="公众号工具"><i class="fa fa-ravelry"></i>公众号工具</a></li>
-				<!-- <li><a href="yule.html" title="娱乐工具"><i class="fa fa-paper-plane-o"></i>娱乐工具</a></li>-->
-				<!-- <li><a href="video.html" title="影视在线"><i class="fa fa-play-circle-o"></i>影视在线</a></li>-->
-				<!-- <li><a href="store.html" title="网站收藏"><i class="fa fa-star"></i>网站收藏</a></li>-->
-			</ul>
+			<div id="menulist_container"></div>
+			<!-- 菜单将由 JavaScript 动态生成 -->
 			<div class="menu_foot">
-			    <a href="javascript:alert('功能暂未配置');"><i class="fa fa-qq"></i></a>
-				<a href="javascript:alert('功能暂未配置');"><i class="fa fa-bar-chart-o"></i></a>
-				<a href="javascript:alert('功能暂未配置');"><i class="fa fa-id-card-o"></i></a>
+				<a href="javascript:alert('功能暂未配置');" title="联系QQ"><i class="fa fa-qq"></i></a>
+				<a href="javascript:alert('功能暂未配置');" title="站点统计"><i class="fa fa-bar-chart-o"></i></a>
+				<a href="javascript:alert('功能暂未配置');" title="关于我们"><i class="fa fa-id-card-o"></i></a>
 			</div>
 		</div>
 		<div class="min">
@@ -141,54 +136,7 @@
 	</div>
 </div>
 </body>
-<script>
-	function changetext() {
-  var price = document.getElementById('price').value;
-  var a = Number(price);
-  var b = a * 0.95;
-  var c = a * 0.9;
-  var d = a * 0.85;
-  var e = a * 0.80;
-  a = a.toFixed(2);
-  b = b.toFixed(2);
-  c = c.toFixed(2);
-  d = d.toFixed(2);
-  e = e.toFixed(2);
-
-  //var ht = "<center><p>1-99(原价):     " + a + "</p><br><p>100-500(九折):     " + b + "</p><br><p>500-1000(七折):     " + c + "</p><br><p>100-3000(六折):     " + d + "</p><br><p>5000以上(四五折):     " + e + "</p><br></center>";
-  var ht = `<br><center><table border="1" id="priceTable"><tr><td>数量（折扣）</td><td>价格</td></tr><tr><td>1-99(原价)</td><td>${a}</td></tr><tr><td>100-500(九五折)</td><td>${b}</td></tr><tr><td>500-1000(九折)</td><td>${c}</td></tr><tr><td>1000-3000(八五折)</td><td>${d}</td></tr><tr><td>5000以上(八折)</td><td>${e}</td></tr></table></center>
-`
-  var div = document.getElementById('p1');
-  div.setAttribute("style", "text-align: left;white-space:pre;");
-  div.innerHTML = ht;
-}
-document.getElementById('copyButton').addEventListener('click', function() {
-	  // 获取表格
-	  var table = document.getElementById('priceTable');
-	  
-	  // 创建一个范围来包含表格
-	  var range = document.createRange();
-	  range.selectNode(table);
-	  
-	  // 清除当前选择
-	  window.getSelection().removeAllRanges();
-	  
-	  // 选择表格
-	  window.getSelection().addRange(range);
-	  
-	  // 尝试复制
-	  try {
-		document.execCommand('copy');
-		alert('表格已复制到剪贴板!');
-	  } catch(err) {
-		console.error('复制失败:', err);
-		alert('复制失败,请手动复制.');
-	  }
-	  
-	  // 清除选择
-	  window.getSelection().removeAllRanges();
-	});
-
-</script>
+<script src="js/index.js" type="module"></script>
+<script src="js/ylprice.js"></script>
 
 </html>

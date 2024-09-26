@@ -1,0 +1,39 @@
+{
+    "station": {
+        "visible": true,
+        "name": "站长工具",
+        "items": {
+            "腾讯域名安全检测": true,
+            "腾讯短网址生成": true,
+            "新浪短网址生成": true,
+            "Html工具": true,
+            "Css工具": true,
+            "javascript工具": true,
+            "JavaScript混淆工具": true,
+            "Json工具": true,
+            "JJencode编码工具": true,
+            "AAencode编码工具": true,
+            "文章伪原创工具": true,
+            "开发工具箱": true,
+            "百度收录在线查询": true,
+            "域名ICP备案查询": true
+        }
+    },
+    "wxtools": {
+        "visible": true,
+        "name": "公众号工具",
+        "items": {
+            "群关公众号转csv": true,
+            "微信信息提取器": true,
+            "价格生成器": true
+        }
+    },
+    "index": {
+        "visible": true,
+        "name": "首页工具",
+        "items": {
+            "梯级价格生成器": true,
+            "群关公众号转csv": true
+        }
+    }
+}
