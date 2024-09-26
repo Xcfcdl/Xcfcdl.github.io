@@ -392,3 +392,35 @@ footer {
         font-size: 16px;
     }
 }
+.menu-toggle {
+    display: none; /* 默认隐藏菜单切换按钮 */
+    cursor: pointer;
+    color: #333;
+    border: 1px solid #E6E6E6; /* 添加边框样式 */
+    border-radius: 4px; /* 圆角 */
+    padding: 5px 10px; /* 内边距 */
+    margin-left: auto; /* 右对齐 */
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* 在移动设备上显示菜单切换按钮 */
+    }
+
+    .menu_container {
+        display: none; /* 默认隐藏菜单 */
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* 根据需要调整 */
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        border: 1px solid #E6E6E6; /* 添加边框样式 */
+        z-index: 1000; /* 确保菜单在其他元素之上 */
+    }
+
+    .menu_container.active {
+        display: flex; /* 显示菜单 */
+    }
+}

@@ -1,7 +1,7 @@
 import { initializeMenu } from './menu_container.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    initializeMenu();
+    initializeMenu(); // 初始化菜单
     // 其他初始化代码
 
     window.extractInfo = extractInfo; // 将 extractInfo 函数暴露到全局作用域
