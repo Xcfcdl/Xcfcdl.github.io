@@ -1,10 +1,8 @@
 import { initializeMenu } from './menu_container.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    initializeMenu();
-    // 其他初始化代码
-
-
+    initializeMenu();       
+            // 其他初始化代码
 function changetext() {
   var price = document.getElementById('price').value;
   var a = Number(price);

@@ -62,7 +62,7 @@ if action == '1':
             </div>
         </div>
     </div>
-    <script src="js/{page_name}.js"></script>
+    <script type="module" src="js/{page_name}.js"></script>
     </body>
     </html>
     """

@@ -105,11 +105,11 @@
                 "title": null,
                 "description": null
             },
-            "价格生成器": {
-                "visible": false,
-                "link": null,
-                "title": null,
-                "description": null
+            "阶梯价格生成器": {
+                "visible": true,
+                "link": "ylprice.html",
+                "title": "<i class='fa fa-star-half-o'></i>阶梯价格生成器",
+                "description": "输入一个价格可以生成阶梯价格"
             }
         }
     }
