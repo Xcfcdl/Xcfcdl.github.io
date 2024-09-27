@@ -1,18 +1,8 @@
 // 初始化菜单
-export function initializeMenu() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuContainer = document.getElementById('menu_container');
+function initializeMenu() {
+    const menuContainer = document.getElementById('menulist_container');
 
     if (!menuContainer) return;
-
-    menuToggle.addEventListener('click', () => {
-        menuContainer.classList.toggle('active'); // 切换菜单的显示状态
-        if (menuContainer.classList.contains('active')) {
-            menuToggle.innerHTML = '✖'; // 显示返回按钮
-        } else {
-            menuToggle.innerHTML = '☰'; // 恢复为菜单按钮
-        }
-    }); // 切换菜单的显示状态
 
     // 清空菜单容器
     menuContainer.innerHTML = '';
@@ -24,6 +14,7 @@ export function initializeMenu() {
         </a>
     `;
     menuContainer.appendChild(hop);
+
     // 获取配置
     fetch('js/config.json')
         .then(response => response.json())
@@ -47,3 +38,5 @@ export function initializeMenu() {
         })
         .catch(error => console.error('Error loading config:', error));
 }
+
+export { initializeMenu };

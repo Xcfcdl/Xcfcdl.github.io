@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>富文本美化器</title>
+<meta name="keywords" content="富文本美化器, 在线工具箱" />
+<meta name="description" content="美化富文本，批量修改样式，增加样式等" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="menu_nav">
+            <a href="#" title="LOGO"><h1>Dony工具箱</h1></a>
+            <a href="#" title="联系QQ"><i class="fa fa-qq"></i></a>
+        </div>
+        <!-- 电脑菜单 -->
+        <div class="menu_container" id="menu_container">
+            <div class="logo">
+                <img src="logo.png" alt="LOGO头像">
+            </div>
+            <div id="menulist_container"></div>
+            <div class="menu_foot">
+                <a href="javascript:alert('功能暂未配置');" title="联系QQ"><i class="fa fa-qq"></i></a>
+                <a href="javascript:alert('功能暂未配置');" title="站点统计"><i class="fa fa-bar-chart-o"></i></a>
+                <a href="javascript:alert('功能暂未配置');" title="关于我们"><i class="fa fa-id-card-o"></i></a>
+            </div>
+        </div>
+        <div class="min">
+            <div class="min_title">
+                <h1>Dony工具箱<font>富文本美化器</font></h1>
+            </div>
+            <div class="min_content">
+                <div class="editor-container">
+                    <div class="toolbar">
+                        <!-- 工具栏按钮将通过JavaScript动态生成 -->
+                    </div>
+                    <div class="editor-wrapper">
+                        <textarea id="source-code" placeholder="在此粘贴您的富文本源代码"></textarea>
+                        <div id="preview-area"></div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer">
+                    <span> Copyright © 2024 All Dony Reserved</span>
+                    <span class="link">
+                        <a href="https://www.donychi.xyz/" title="Dony工具箱" target="_blank">Dony工具箱</a>
+                        <a href="https://www.donychi.xyz/" title="Dony迁站坊" target="_blank">Dony迁站坊</a>
+                    </span>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<script type="module" src="js/richtextedit.js"></script>
+<script type="module" src="js/menu_container.js"></script>
+</body>
+</html>

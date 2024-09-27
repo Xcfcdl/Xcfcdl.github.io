@@ -99,11 +99,11 @@
                 "title": "<i class='fa fa-star-half-o'></i>群关公众号转 csv",
                 "description": "将收藏的公众号信息转为 csv"
             },
-            "微信信息提取器": {
-                "visible": false,
-                "link": null,
-                "title": null,
-                "description": null
+            "富文本美化": {
+                "visible": true,
+                "link": "richtextedit.html",
+                "title": "<i class='fa fa-file-code-o'></i>富文本美化器",
+                "description": "美化富文本，批量修改样式，增加样式等"
             },
             "阶梯价格生成器": {
                 "visible": true,

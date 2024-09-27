@@ -17,7 +17,7 @@
 		    <a href="#" title="LOGO"><h1>Dony工具箱</h1></a>
 			<a href="#" title="联系QQ"><i class="fa fa-qq"></i></a>
 		</div>
-		<div class="menu-toggle">☰</div>
+		<div class="menu-toggle">☰</div> <!-- 添加菜单切换按钮 -->
 <div class="menu_container" id="menu_container">
     <div class="logo">
         <img src="logo.png" alt="LOGO头像">
@@ -50,5 +50,11 @@
 </div>
 
 <script type="module" src="js/station.js"></script>
+<script>
+    // 添加JavaScript代码来切换菜单的显示状态
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.getElementById('menu_container').classList.toggle('active');
+    });
+</script>
 </body>
 </html>
