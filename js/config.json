@@ -110,6 +110,12 @@
                 "link": "ylprice.html",
                 "title": "<i class='fa fa-star-half-o'></i>阶梯价格生成器",
                 "description": "输入一个价格可以生成阶梯价格"
+            },
+            "Markdown编辑器": {
+                "visible": true,
+                "link": "markdowneditor.html",
+                "title": "<i class='fa fa-file-code-o'></i>Markdown编辑器",
+                "description": "编辑Markdown，微信公众号排版工具"
             }
         }
     }

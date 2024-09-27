@@ -1,0 +1,66 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8"/>
+    <title>Markdown编辑器</title>
+    <meta name="keywords" content="Markdown编辑器, 在线工具箱" />
+    <meta name="description" content="编辑Markdown，微信公众号排版工具" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    <div class="container">
+        <div class="content">
+            <div class="menu_nav">
+                <a href="#" title="LOGO"><h1>Dony工具箱</h1></a>
+                <a href="#" title="联系QQ"><i class="fa fa-qq"></i></a>
+            </div>
+            <!-- 电脑菜单 -->
+            <div class="menu_container" id="menu_container">
+                <div class="logo">
+                    <img src="logo.png" alt="LOGO头像">
+                </div>
+                <div id="menulist_container"></div>
+                <!-- 菜单将由 JavaScript 动态生成 -->
+                <div class="menu_foot">
+                    <a href="javascript:alert('功能暂未配置');" title="联系QQ"><i class="fa fa-qq"></i></a>
+                    <a href="javascript:alert('功能暂未配置');" title="站点统计"><i class="fa fa-bar-chart-o"></i></a>
+                    <a href="javascript:alert('功能暂未配置');" title="关于我们"><i class="fa fa-id-card-o"></i></a>
+                </div>
+            </div>
+            <div class="min">
+                <div class="min_title">
+                    <h1>Dony工具箱<font>Markdown编辑器</font></h1>
+                </div>
+                <div class="min_content">
+                    <!-- 业务标签和业务代码 -->
+                    <div class="markdown-editor-container">
+                        <iframe src="https://markdown.com.cn/editor" width="100%" height="600" frameborder="0"></iframe>
+                    </div>
+                    <style>
+                        .markdown-editor-container {
+                            width: 100%;
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 20px;
+                        }
+                    </style>
+                </div>
+                <footer>
+                    <div class="footer">
+                        <span> Copyright © 2024 All Dony Reserved</span>
+                        <span class="link">
+                            <a href="https://www.donychi.xyz/" title="Dony工具箱" target="_blank">Dony工具箱</a>
+                            <a href="https://www.donychi.xyz/" title="Dony迁站坊" target="_blank">Dony迁站坊</a>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/markdowneditor.js"></script>
+    </body>
+    </html>
+    
