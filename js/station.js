@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 读取 config.json 文件并生成 min_content
     async function generateMinContent() {
         try {
-            const response = await fetch('js/config.json');
+            const response = await fetch('../js/config.json');
             const config = await response.json();
 
             const minContent = document.querySelector('.min_content');

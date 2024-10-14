@@ -16,7 +16,7 @@ function initializeMenu() {
     menuContainer.appendChild(hop);
 
     // 获取配置
-    fetch('js/config.json')
+    fetch('../js/config.json')
         .then(response => response.json())
         .then(config => {
             const categories = ['station', 'wxtools'];

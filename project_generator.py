@@ -21,7 +21,7 @@ if action == '1':
     <meta name="description" content="{page_description}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
     <div class="container">
@@ -33,7 +33,7 @@ if action == '1':
             <!-- 电脑菜单 -->
             <div class="menu_container" id="menu_container">
                 <div class="logo">
-                    <img src="logo.png" alt="LOGO头像">
+                    <img src="../logo.png" alt="LOGO头像">
                 </div>
                 <div id="menulist_container"></div>
                 <!-- 菜单将由 JavaScript 动态生成 -->
@@ -63,7 +63,7 @@ if action == '1':
             </div>
         </div>
     </div>
-    <script type="module" src="js/{page_name}.js"></script>
+    <script type="module" src="../js/{page_name}.js"></script>
     </body>
     </html>
     """
@@ -105,7 +105,7 @@ if action == '1':
             json.dump(config, file, ensure_ascii=False, indent=4)
 
     # 创建 HTML 文件
-    html_path = f"{page_name}.html"
+    html_path = f"pages/{page_name}.html"
     with open(html_path, 'w', encoding='utf-8') as file:
         file.write(html_content)
 
@@ -161,7 +161,7 @@ elif action == '2':
             remove_from_config(category, project_name)
 
             # 删除 HTML 文件
-            html_path = f"{project_name}.html"
+            html_path = f"pages/{project_name}.html"
             if os.path.exists(html_path):
                 os.remove(html_path)
             else:

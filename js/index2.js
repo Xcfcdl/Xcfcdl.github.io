@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             const article = document.createElement('div');
                             article.className = 'article';
                             article.innerHTML = `
-                                <a href="${item.link || '#'}" title="${item.title || ''}">
+                                <a href="pages/${item.link || '#'}" title="${item.title || ''}">
                                     <h1>${item.title || ''}</h1>
                                     <div class="abstract">${item.description || ''}</div>
                                 </a>

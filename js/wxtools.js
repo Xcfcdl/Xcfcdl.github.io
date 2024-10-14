@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function generateMinContent() {
     try {
-        const response = await fetch('js/config.json');
+        const response = await fetch('../js/config.json');
         const config = await response.json();
 
         const minContent = document.querySelector('.min_content');
@@ -16,6 +16,7 @@ async function generateMinContent() {
 
         // 遍历 config.json 中的 "wxtools" 部分
         const section = config.wxtools;
+        console.log("微信工具菜单生成");
         if (section.visible) {
             for (const itemKey in section.items) {
                 const item = section.items[itemKey];
