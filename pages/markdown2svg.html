@@ -1,7 +1,6 @@
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8"/>
     <title>markdown转svg卡片</title>
     <meta name="keywords" content="markdown转svg卡片, 在线工具箱" />
@@ -9,47 +8,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    </head>
-    <body>
-    <div class="container">
-        <div class="content">
-            <div class="menu_nav">
-                <a href="#" title="LOGO"><h1>Dony工具箱</h1></a>
-                <a href="#" title="联系QQ"><i class="fa fa-qq"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .page {
+            width: 400px;
+            height: 600px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: white;
+            overflow-y: auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .page h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="menu_nav">
+            <a href="#" title="LOGO"><h1>Dony工具箱</h1></a>
+            <a href="#" title="联系QQ"><i class="fa fa-qq"></i></a>
+        </div>
+        <!-- 电脑菜单 -->
+        <div class="menu_container" id="menu_container">
+            <div class="logo">
+                <img src="../logo.png" alt="LOGO头像">
             </div>
-            <!-- 电脑菜单 -->
-            <div class="menu_container" id="menu_container">
-                <div class="logo">
-                    <img src="../logo.png" alt="LOGO头像">
-                </div>
-                <div id="menulist_container"></div>
-                <!-- 菜单将由 JavaScript 动态生成 -->
-                <div class="menu_foot">
-                    <a href="javascript:alert('功能暂未配置');" title="联系QQ"><i class="fa fa-qq"></i></a>
-                    <a href="javascript:alert('功能暂未配置');" title="站点统计"><i class="fa fa-bar-chart-o"></i></a>
-                    <a href="javascript:alert('功能暂未配置');" title="关于我们"><i class="fa fa-id-card-o"></i></a>
-                </div>
-            </div>
-            <div class="min">
-                <div class="min_title">
-                    <h1>Dony工具箱<font>markdown转svg卡片</font></h1>
-                </div>
-                <div class="min_content">
-                    <!-- 业务标签和业务代码 -->
-                </div>
-                <footer>
-                    <div class="footer">
-                        <span> Copyright © 2024 All Dony Reserved</span>
-                        <span class="link">
-                            <a href="https://www.donychi.xyz/" title="Dony工具箱" target="_blank">Dony工具箱</a>
-                            <a href="https://www.donychi.xyz/" title="Dony迁站坊" target="_blank">Dony迁站坊</a>
-                        </span>
-                    </div>
-                </footer>
+            <div id="menulist_container"></div>
+            <!-- 菜单将由 JavaScript 动态生成 -->
+            <div class="menu_foot">
+                <a href="javascript:alert('功能暂未配置');" title="联系QQ"><i class="fa fa-qq"></i></a>
+                <a href="javascript:alert('功能暂未配置');" title="站点统计"><i class="fa fa-bar-chart-o"></i></a>
+                <a href="javascript:alert('功能暂未配置');" title="关于我们"><i class="fa fa-id-card-o"></i></a>
             </div>
         </div>
+        <div class="min">
+            <div class="min_title">
+                <h1>Dony工具箱<font>markdown转svg卡片</font></h1>
+            </div>
+            <div class="min_content">
+                <div class="container">
+                    <h1>Markdown Grid Generator</h1>
+                    <textarea id="markdownInput" placeholder="Enter your Markdown here..."></textarea>
+                    <div>
+                        <label for="splitCount">Headers per group:</label>
+                        <input type="number" id="splitCount" value="2" min="1">
+                    </div>
+                    <div>
+                        <label for="styleSelect">Select Style:</label>
+                        <select id="styleSelect"></select>
+                    </div>
+                    <button onclick="generateGrid()">Generate Grid</button>
+                    <div id="gridContainer" class="grid"></div>
+                    <div>
+                        <button onclick="downloadAsPNG()">Download as PNG</button>
+                        <button onclick="downloadAsSVG()">Download as SVG</button>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer">
+                    <span> Copyright © 2024 All Dony Reserved</span>
+                    <span class="link">
+                        <a href="https://www.donychi.xyz/" title="Dony工具箱" target="_blank">Dony工具箱</a>
+                        <a href="https://www.donychi.xyz/" title="Dony迁站坊" target="_blank">Dony迁站坊</a>
+                    </span>
+                </div>
+            </footer>
+        </div>
     </div>
-    <script type="module" src="../js/markdown2svg.js"></script>
-    </body>
-    </html>
-    
+</div>
+<script type="module" src="../js/markdown2svg.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+    "styles": [
+        {
+            "name": "经典",
+            "border": "2px solid black",
+            "padding": "10px",
+            "backgroundColor": "white",
+            "borderRadius": "0px",
+            "boxShadow": "none"
+        },
+        {
+            "name": "现代",
+            "border": "1px solid #ddd",
+            "padding": "15px",
+            "backgroundColor": "#f9f9f9",
+            "borderRadius": "5px",
+            "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
+        },
+        {
+            "name": "优雅",
+            "border": "3px double #333",
+            "padding": "20px",
+            "backgroundColor": "#fff8e1",
+            "borderRadius": "10px",
+            "boxShadow": "0 4px 8px rgba(0,0,0,0.2)"
+        },
+        {
+            "name": "时尚",
+            "border": "4px dashed #ff5733",
+            "padding": "25px",
+            "backgroundColor": "#ffe6e6",
+            "borderRadius": "15px",
+            "boxShadow": "0 6px 12px rgba(0,0,0,0.3)"
+        },
+        {
+            "name": "简约",
+            "border": "1px solid #e0e0e0",
+            "padding": "12px",
+            "backgroundColor": "#ffffff",
+            "borderRadius": "3px",
+            "boxShadow": "0 1px 3px rgba(0,0,0,0.05)"
+        },
+        {
+            "name": "自然",
+            "border": "2px solid #4CAF50",
+            "padding": "18px",
+            "backgroundColor": "#e8f5e9",
+            "borderRadius": "8px",
+            "boxShadow": "0 3px 6px rgba(76,175,80,0.2)"
+        },
+        {
+            "name": "科技",
+            "border": "3px double #00bcd4",
+            "padding": "16px",
+            "backgroundColor": "#e0f7fa",
+            "borderRadius": "6px",
+            "boxShadow": "0 2px 5px rgba(0,188,212,0.3)"
+        },
+        {
+            "name": "复古",
+            "border": "3px solid #795548",
+            "padding": "22px",
+            "backgroundColor": "#efebe9",
+            "borderRadius": "0px",
+            "boxShadow": "5px 5px 0px #795548"
+        },
+        {
+            "name": "梦幻",
+            "border": "2px solid #e91e63",
+            "padding": "20px",
+            "backgroundColor": "#fce4ec",
+            "borderRadius": "12px",
+            "boxShadow": "0 4px 10px rgba(233,30,99,0.4)"
+        },
+        {
+            "name": "未来",
+            "border": "1px solid #3f51b5",
+            "padding": "14px",
+            "backgroundColor": "#e8eaf6",
+            "borderRadius": "20px",
+            "boxShadow": "0 8px 16px rgba(63,81,181,0.2)"
+        }
+    ]
+}
