@@ -116,6 +116,12 @@
                 "link": "markdowneditor.html",
                 "title": "<i class='fa fa-file-code-o'></i>Markdown编辑器",
                 "description": "编辑Markdown，微信公众号排版工具"
+            },
+            "markdown转svg卡片": {
+                "visible": true,
+                "link": "markdown2svg.html",
+                "title": "<i class='fa fa-file-code-o'></i>markdown转svg卡片",
+                "description": "用markdown制作小红书卡片"
             }
         }
     }

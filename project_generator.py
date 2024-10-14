@@ -20,7 +20,7 @@ if action == '1':
     <meta name="keywords" content="{page_title}, 在线工具箱" />
     <meta name="description" content="{page_description}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -48,6 +48,7 @@ if action == '1':
                     <h1>Dony工具箱<font>{page_title}</font></h1>
                 </div>
                 <div class="min_content">
+                <h1>页面创建成功，请在js/{page_name}.js中编写业务代码</h1>
                     <!-- 业务标签和业务代码 -->
                 </div>
                 <footer>
